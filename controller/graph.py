@@ -4,6 +4,7 @@ from ttkbootstrap.dialogs import Messagebox
 from utils.connection import init_db
 import matplotlib.pyplot as plt
 
+# List all the questions in the survey
 questions = [
     "Hours of sleep",
     "Hours with friends and family",
@@ -17,8 +18,9 @@ questions = [
     "Personal wellbeing 1-10"
 ]
 
+# Opens the graphs window
 def open_graph_window():
-
+    # creates
     window = tb.Toplevel()
     window.title("Graphs")
     window.geometry("600x600")
@@ -44,7 +46,7 @@ def open_graph_window():
     )
     y_box.pack(pady=5)
     y_box.current(5)
-
+    # Creates the graphs
     def make_graph():
 
         x_question = x_box.current() + 1
@@ -82,7 +84,7 @@ def open_graph_window():
                 y.append(row[1])
 
             plt.scatter(x, y)
-
+            # Label the axis of the graph
             plt.xlabel(questions[x_question - 1])
             plt.ylabel(questions[y_question - 1])
             plt.title("Mental Health Data")
