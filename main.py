@@ -16,18 +16,21 @@ from utils.footer import create_footer
 # ------ Button function ---------
 # opens the new windows and deletes the main window
 
+# Opens vistor sign up
 def vistor_signup_main_withdrawn(current_window):
     open_vistor_signup(current_window)
     current_window.withdraw() # Withdraw the main window 
 
+# Opens vistor login
 def vistor_login_main_withdrawn(current_window):
     open_vistor_login(current_window)
     current_window.withdraw() # Withdraw the main window 
 
+# Opens senior admin login
 def senior_admin_login_main_withdrawn(current_window):
     open_senior_admin_login(current_window)
     current_window.withdraw() # Withdraw the main window 
-       
+# Open counsellor login   
 def counsellor_login_main_withdrawn(current_window):
     open_counsellor_login(current_window)
     current_window.withdraw() # Withdraw the main window 
